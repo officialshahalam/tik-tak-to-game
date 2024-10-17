@@ -33,7 +33,6 @@ function initialize() {
 
     // Remove Active Class From Button
     newGameBtn.classList.remove("active");
-    
 }
 
 initialize();
@@ -103,4 +102,7 @@ boxes.forEach((box, index) => {
 });
 
 // Add Event Listener to Button 
-newGameBtn.addEventListener('click', initialize);
+newGameBtn.addEventListener('click', ()=>{
+    initialize();
+    location.reload();
+});

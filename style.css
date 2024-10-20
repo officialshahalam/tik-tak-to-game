@@ -1,24 +1,24 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", "sans-serif";
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", "sans-serif";
 }
 
 .wrapper {
-  height: 100vh;
-  width: 100vw; 
-  background: #000;
-  background-size: cover;
-  background-position: center;
-  display: grid;
-  place-items: center;
-  /* position: relative; */
+    height: 100vh;
+    width: 100vw;
+    background: url("./Asset/gradient-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-items: center;
+    /* position: relative; */
 }
 
-.gameInfo{
+.gameInfo {
     background: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 1rem;
@@ -32,22 +32,22 @@
 }
 
 .gameGrid {
-  display: grid;
-  place-items: center;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 1rem;
-  width: 90%;
-  max-width: 20rem; 
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(7px);
-  aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 20rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(7px);
+    aspect-ratio: 1/1;
 }
 
-.box{
+.box {
     color: white;
-    position: relative; 
+    position: relative;
     aspect-ratio: 1/1;
     display: grid;
     place-items: center;
@@ -57,16 +57,21 @@
     transition: all 150ms ease-in-out;
 }
 
-.box1,.box2,.box5,.box4{
+.box1,
+.box2,
+.box5,
+.box4 {
     border-bottom: 2px solid #fff;
     border-right: 2px solid #fff;
 }
 
-.box3,.box6{
+.box3,
+.box6 {
     border-bottom: 2px solid #fff;
 }
 
-.box7,.box8{
+.box7,
+.box8 {
     border-right: 2px solid #fff;
 }
 
@@ -74,7 +79,7 @@
     background-color: rgba(0, 255, 0, 0.3);
 }
 
-.btn{
+.btn {
     position: absolute;
     bottom: 3rem;
     left: 50%;
@@ -83,7 +88,7 @@
     border: 1px solid rgba(255, 255, 255, 0.25);
     color: white;
     padding: 0.5rem 2rem;
-    border-radius:1rem;
+    border-radius: 1rem;
     cursor: pointer;
     backdrop-filter: blur(7px);
     transition: all 150ms ease-in-out;
@@ -91,7 +96,14 @@
     opacity: 0;
 }
 
-.btn.active{
+.btn.active {
     opacity: 1;
     pointer-events: all;
+}
+
+@media only screen and (max-width: 480px) {
+    .gameInfo {
+        padding: 0.2rem 2rem;
+        font-size: 12px;
+    }
 }
